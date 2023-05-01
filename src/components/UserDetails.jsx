@@ -11,9 +11,8 @@ const UserDetails = () => {
     dispatch(addUser(name));
   };
 
-  const removeSingleUser = (item) => {
-    alert(` Removing ${item }`)
-    dispatch(removeUser(item));
+  const removeSingleUser = (id) => {
+    dispatch(removeUser(id));
     ;
   };
   return (
@@ -36,7 +35,7 @@ const UserDetails = () => {
               <ul className="list" key={id}>
                 <li>{item}</li>
               </ul>
-              <Button className="m-2" onClick={() => removeSingleUser(item)}>
+              <Button className="m-2" onClick={() => removeSingleUser(id)}>
                 Delete
               </Button>
             </div>

@@ -8,10 +8,11 @@ const userSlice = createSlice({
       state.push(action.payload);
     },
     removeUser(state, action) {
-      return state.filter((item) => item !== action.payload);
+      // return state.filter((item) => item !== action.payload);
+     state.splice(action.payload,1)
     },
     clearAllUsers(state, action) {
-      return state.filter((item) => item === action.payload);
+    return []
     },
   },
 });
